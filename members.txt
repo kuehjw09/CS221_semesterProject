@@ -1,0 +1,19 @@
+Members - Progress made as of 11/21/2021
+
+Jesse Kuehl:
+Made first draft of ER diagram and database schema
+Found large collection of video game data
+Contributed to sample-dataset.sql
+Wrote create-db.sql
+Wrote queries in sample-query.sql
+Wrote README.md
+Wrote Python scripts
+
+Summer Roe:
+Revised ER diagram and database schema and added components
+Contributed to sample-dataset.sql
+Began brainstorming SELECT statements
+Wrote progress report and prepared content for Milestone 1
+
+Dustin Yang:
+Contributed to sample-dataset.sql
