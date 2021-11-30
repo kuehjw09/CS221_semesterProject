@@ -26,14 +26,11 @@ SELECT genre, COUNT(*)
 FROM game
 GROUP BY genre;
 
-# view all rows in table `platform`
-SELECT name, releaseYear
-FROM platform;
-
 # view information about games with genre 'Action'
 SELECT name, rating, releaseYear
 FROM game
-WHERE genre = 'Action';
+WHERE genre = 'Action'
+ORDER BY releaseYear;
 
 # view count of genres in dataset
 SELECT genre, count(*)
@@ -43,25 +40,26 @@ GROUP BY genre;
 # select all XONE games in dataset 
 SELECT G.name, G.releaseYear, P.name as platform
 FROM game G, platform P
-WHERE G.platformID = P.platformID AND P.name = 'XONE'
+WHERE G.platformID = P.ID AND P.name = 'XONE'
 ORDER BY G.name;
 
 # view games with release year less than the average
 SELECT * FROM game WHERE releaseYear < (
 	SELECT AVG(releaseYear) 
-	FROM game);
+	FROM game)
+ORDER BY releaseYear DESC;
   
 # select all titles on the N64 platform in the database
-SELECT name as Title, releaseYear, P.name as platform
-FROM game, platform P
-WHERE game.platformID = P.platformID
-AND P.name = 'N64';
+SELECT G.name as Title, G.releaseYear, P.Name as platform
+FROM game G, platform P
+WHERE G.platformID = P.ID
+AND P.Name = 'N64';
 
 
 # inner join tables, order by release year
 SELECT G.name as title, G.releaseYear , G.rating, Pu.name as publisher, P.name as platform, D.name as developer
 FROM game G
-INNER JOIN developer D ON D.developerID = G.developerID
-INNER JOIN publisher Pu ON Pu.publisherID = G.publisherID
-INNER JOIN platform P on P.platformID = G.platformID
+INNER JOIN developer D ON D.ID = G.developerID
+INNER JOIN publisher Pu ON Pu.ID = G.publisherID
+INNER JOIN platform P on P.ID = G.platformID
 ORDER BY G.releaseYear;

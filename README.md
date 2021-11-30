@@ -28,7 +28,17 @@ This is a relational database schema using videogame data
 
 ---
 
+- video_game.csv
+  This file contains video game data that will be transformed and used to populate the database using the pandas and sqlalchemy modules in python.
+
 - create-db.sql
+  Execue this file in MySQL Workbench to create the sql-videogame database and tables.
+
 - data-ac.py
+  Run this Python script to insert the dataframe from video_game.csv into the database. You may need to install python3, pandas, and sqlalchemy using pip and pip3.
+
 - create-dataset.sql
+  Execute this file in MySQL to format the dataframes imported in the previous step. Formatted data will be used to populate the database.
+
 - sample-query.sql
+  Use this file to explore the database. Sample queries are provided for project-milestone-2.
