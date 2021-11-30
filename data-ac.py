@@ -5,8 +5,8 @@ from sqlalchemy import create_engine
 # create sqlalchemy engine
 engine = create_engine(
  "mysql+pymysql://{user}:{pw}@{host}/{db}"
- .format(user="root", pw="Ubuntu2012!", 
- db="sql-videogame", host="34.72.170.149"))
+ .format(user="", pw="", 
+ db="sql-videogame", host=""))
 
 # read specific columns from csv file `video_game.csv`
 df_publisher = pd.read_csv('./video_game.csv', usecols=['Publisher'])
