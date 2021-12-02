@@ -16,7 +16,9 @@ This is a relational database schema using videogame data
   Run this Python script to insert the dataframe from video_game.csv into the database. You may need to install python3, pandas, and sqlalchemy using pip and pip3.
 
 - create-dataset.sql
-  Execute this file in MySQL to format the dataframes imported in the previous step. Formatted data will be used to populate the database.
+  Execute this file in MySQL to format the dataframes imported in the previous step.
+  SQL statements in this file are designed to elimate redundancy from video_game.csv.
+  Formatted data will be used to populate the database tables.
 
 - sample-query.sql
   Use this file to explore the database. Sample queries are provided for project-milestone-2.

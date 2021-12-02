@@ -7,7 +7,7 @@ Contributed to sample-dataset.sql
 Wrote create-db.sql
 Wrote queries in sample-query.sql
 Wrote README.md
-Wrote Python scripts
+Wrote Python scripts to acquire dataframe reads and insert them into MySQL
 
 Summer Roe:
 Revised ER diagram and database schema and added components

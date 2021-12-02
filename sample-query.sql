@@ -27,10 +27,10 @@ FROM game
 GROUP BY genre;
 
 # view information about games with genre 'Action'
-SELECT name, rating, releaseYear
+SELECT name, rating, ReleaseYear
 FROM game
-WHERE genre = 'Action'
-ORDER BY releaseYear;
+WHERE genre = 'Action' AND ReleaseYear IS NOT NULL
+ORDER BY ReleaseYear DESC;
 
 # view count of genres in dataset
 SELECT genre, count(*)
@@ -61,6 +61,21 @@ FROM game G
 INNER JOIN platform P ON G.platformID = P.ID
 WHERE G.name LIKE ('%Call of Duty%');
 
+# select  titles with name halo
+SELECT G.Name, G.ReleaseYear, P.name as Platform 
+FROM game G
+INNER JOIN platform P ON G.platformID = P.ID
+WHERE G.name LIKE ('%Halo%')
+ORDER BY G.ReleaseYear;
+
+# select titles with name star wars
+SELECT G.Name, G.ReleaseYear, P.name as Platform 
+FROM game G
+INNER JOIN platform P ON G.platformID = P.ID
+WHERE G.name LIKE ('%Star Wars%')
+ORDER BY G.ReleaseYear;
+
+# SELECT titles like "metroid"
 SELECT G.Name, G.Genre, P.name as Platform, G.releaseYear
 FROM game G
 INNER JOIN platform P ON G.platformID = P.ID
@@ -72,6 +87,14 @@ SELECT releaseYear , COUNT(*)
 FROM game 
 GROUP BY ReleaseYear
 ORDER BY COUNT(*) DESC;
+
+# Select all games developed by From Software
+SELECT G.name, G.ReleaseYear, D.name as Developer, Pl.name as Platform
+FROM game G
+INNER JOIN developer D ON D.ID = G.developerID
+INNER JOIN platform Pl ON Pl.ID = G.platformID
+WHERE D.name LIKE ('%From Software')
+ORDER BY ReleaseYear;
 
 # inner join tables, order by release year
 SELECT G.name as title, G.releaseYear , G.rating, Pu.name as publisher, P.name as platform, D.name as developer
