@@ -55,6 +55,23 @@ FROM game G, platform P
 WHERE G.platformID = P.ID
 AND P.Name = 'N64';
 
+# select all titles with name call of duty
+SELECT G.Name, G.Genre, P.name as Platform 
+FROM game G
+INNER JOIN platform P ON G.platformID = P.ID
+WHERE G.name LIKE ('%Call of Duty%');
+
+SELECT G.Name, G.Genre, P.name as Platform, G.releaseYear
+FROM game G
+INNER JOIN platform P ON G.platformID = P.ID
+WHERE G.name LIKE '%metroid%'
+ORDER BY G.releaseYear;
+
+# view the count of games release by release year
+SELECT releaseYear , COUNT(*)
+FROM game 
+GROUP BY ReleaseYear
+ORDER BY COUNT(*) DESC;
 
 # inner join tables, order by release year
 SELECT G.name as title, G.releaseYear , G.rating, Pu.name as publisher, P.name as platform, D.name as developer
