@@ -6,8 +6,9 @@ Found large collection of video game data
 Contributed to sample-dataset.sql
 Wrote create-db.sql
 Wrote queries in sample-query.sql
+Wrote operations.py
 Wrote README.md
-Wrote Python scripts to acquire dataframe reads and insert them into MySQL
+Wrote data-ac.py
 
 Summer Roe:
 Revised ER diagram and database schema and added components

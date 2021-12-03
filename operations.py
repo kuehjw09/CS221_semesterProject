@@ -25,29 +25,27 @@ else:
   # Execute database operations
   print('connected to database')
 
-  # using query params to insert a new game
-
-
-  gameQuery = (
-    "SELECT G.name as title, G.releaseYear , G.rating, Pu.name as publisher, P.name as platform, D.name as developer "
-    "FROM game G "
-    "INNER JOIN developer D ON D.ID = G.developerID "
-    "INNER JOIN publisher Pu ON Pu.ID = G.publisherID "
-    "INNER JOIN platform P on P.ID = G.platformID "
-    "WHERE G.name LIKE ('%s%') "
-    "ORDER BY G.releaseYear DESC;"
-  )
-
+  # create cursor object
   dbCursor = dbConnection.cursor()
 
+  # using query params to insert a new game
   def dbQuery(gameData):
-   dbCursor.execute(gameQuery, gameData)
-   for row in dbCursor.fetchall(): 
-    print('Search Results:', row)
+    gameQuery = (
+    "SELECT G.name as title, G.releaseYear , G.rating, P.name as platform, D.name as developer "
+    "FROM game G "
+    "INNER JOIN developer D ON D.ID = G.developerID "
+    "INNER JOIN platform P on P.ID = G.platformID "
+    "WHERE G.name LIKE ('%" + gameData +"%') "
+    "ORDER BY G.releaseYear DESC;"
+  )
+    dbCursor.execute(gameQuery)
+    print('Search Results: ')
+    for row in dbCursor.fetchall(): 
+      print(row)
   
   print('Enter Game Title:', end = '')
   title = input()
-  gameData = (title)
+  gameData = title
   dbQuery(gameData)
 
   dbConnection.commit()

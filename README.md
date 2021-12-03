@@ -22,3 +22,7 @@ This is a relational database schema using videogame data
 
 - sample-query.sql
   Use this file to explore the database. Sample queries are provided for project-milestone-2.
+
+- operations.py
+  Running this python script in the CMD Line (Windows) or Terminal (Mac) will query the database using  
+  user input.
