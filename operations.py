@@ -7,9 +7,9 @@ from mysql.connector import errorcode
 # use mysql.connector.connect() function to connect to database
 try:
  dbConnection = mysql.connector.connect(
-  user='root',
-  password='Ubuntu2012!',
-  host='34.72.170.149',
+  user='__username__',
+  password='__password__',
+  host='__host-ip-address__',
   database='sql-videogame'
   )
 
