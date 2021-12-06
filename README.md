@@ -6,6 +6,14 @@ This is a relational database schema using videogame data
 
 ---
 
+- requirements.txt
+  to install all dependencies for this project, type:
+  pip3 intall -r requirements.txt
+  in your CMD line (Windows) or Terminal (Unix/macOS).
+  You will need to have Python3 installed. To check your current version of python type:
+  python --version
+  in your CMD line (Windows) or Terminal (Unix/macOS)
+
 - video_game.csv
   This file contains video game data that will be transformed and used to populate the database using the pandas and sqlalchemy modules in python.
 
