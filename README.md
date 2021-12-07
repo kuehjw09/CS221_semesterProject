@@ -7,12 +7,11 @@ This is a relational database schema using videogame data
 ---
 
 - requirements.txt
+  You will need to have Python3 installed. To check your current version of python, type in your CMD line (Windows) or Terminal (Unix/macOS):
+  python --version
+
   to install all dependencies for this project, type:
   pip3 intall -r requirements.txt
-  in your CMD line (Windows) or Terminal (Unix/macOS).
-  You will need to have Python3 installed. To check your current version of python type:
-  python --version
-  in your CMD line (Windows) or Terminal (Unix/macOS)
 
 - video_game.csv
   This file contains video game data that will be transformed and used to populate the database using the pandas and sqlalchemy modules in python.
@@ -32,5 +31,5 @@ This is a relational database schema using videogame data
   Use this file to explore the database. Sample queries are provided for project-milestone-2.
 
 - operations.py
-  Running this python script in the CMD Line (Windows) or Terminal (Mac) will query the database using  
+  Run this python script in the CMD Line (Windows) or Terminal (Mac) to query the database using  
   user input.
