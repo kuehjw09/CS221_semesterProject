@@ -30,8 +30,11 @@ This is a relational database schema using videogame data
   SQL statements in this file are designed to elimate redundancy from video_game.csv.
   Formatted data will be used to populate the database tables.
 
+- test-production.sql
+  Requirement for milestone 2 alters the database on behalf of the user and shows working operations on the production dataset.
+
 - sample-query.sql | dustin_sample_query.sql
-  Use this file to explore the database. Sample queries are provided for project-milestone-2.
+  Sample queries written by our team are provided for project-milestone-2.
 
 - operations.py
   From the project directory, run this python script by typing:

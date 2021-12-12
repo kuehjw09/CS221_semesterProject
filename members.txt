@@ -1,22 +1,24 @@
 Members - Progress made as of 12/12/2021
 
 Jesse Kuehl:
-Made first draft of ER diagram and database schema
-Found large collection of video game data
 Contributed to sample-dataset.sql
 Wrote create-db.sql
 Wrote queries in sample-query.sql
 Wrote operations.py
 Wrote README.md
 Wrote data-ac.py
+contributed to test-production.sql
 
 Summer Roe:
 Revised ER diagram and database schema and added components
 Contributed to sample-dataset.sql
 Wrote SELECT statements
 Wrote progress report and prepared content for Milestone 2
+contributed to test-production.sql
 
 Dustin Yang:
 Contributed to sample-dataset.sql
 Wrote dustin_sample_query.sql
-Collaborated on database schema
+Collaborated on database design - added releaseYear column for platform table
+created ER-diagram.pdf by reverse engineering db in MySQL
+contributed to test-production.sql
