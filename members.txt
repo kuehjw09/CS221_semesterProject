@@ -1,4 +1,4 @@
-Members - Progress made as of 11/21/2021
+Members - Progress made as of 12/12/2021
 
 Jesse Kuehl:
 Made first draft of ER diagram and database schema
