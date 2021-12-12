@@ -8,7 +8,7 @@ from mysql.connector import errorcode
 try:
  dbConnection = mysql.connector.connect(
   user='__USERNAME__',
-  password='__PASSWORD__',
+  password='__PASSWORD__!',
   host='__HOST-IP-ADDRESS__',
   database='sql-videogame'
   )

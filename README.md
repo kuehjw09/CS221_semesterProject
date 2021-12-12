@@ -11,10 +11,13 @@ This is a relational database schema using videogame data
   python --version
 
   to install all dependencies for this project, type:
-  pip3 intall -r requirements.txt
+  pip3 install -r requirements.txt
 
 - video_game.csv
   This file contains video game data that will be transformed and used to populate the database using the pandas and sqlalchemy modules in python.
+
+- ER-diagram.pdf
+  This PDF displays the project database ER-diagram
 
 - create-db.sql
   Execue this file in MySQL Workbench to create the sql-videogame database and tables.
@@ -27,9 +30,12 @@ This is a relational database schema using videogame data
   SQL statements in this file are designed to elimate redundancy from video_game.csv.
   Formatted data will be used to populate the database tables.
 
-- sample-query.sql
+- sample-query.sql | dustin_sample_query.sql
   Use this file to explore the database. Sample queries are provided for project-milestone-2.
 
 - operations.py
-  Run this python script in the CMD Line (Windows) or Terminal (Mac) to query the database using  
+  From the project directory, run this python script by typing:
+  python3 operations.py
+
+  in the CMD Line (Windows) or Terminal (Mac) to query the database using  
   user input.

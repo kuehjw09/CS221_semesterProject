@@ -13,8 +13,10 @@ Wrote data-ac.py
 Summer Roe:
 Revised ER diagram and database schema and added components
 Contributed to sample-dataset.sql
-Began brainstorming SELECT statements
-Wrote progress report and prepared content for Milestone 1
+Wrote SELECT statements
+Wrote progress report and prepared content for Milestone 2
 
 Dustin Yang:
 Contributed to sample-dataset.sql
+Wrote dustin_sample_query.sql
+Collaborated on database schema
